@@ -1,0 +1,14 @@
+<nav class="navbar">
+    <ul>
+        <li><h3><a href="{% url 'base:index' %}">Home</a></h3></li>
+        <li><h3><a href="{% url 'base:add' %}">Add items</a></h3> </li>
+        <li><h3><a href="{% url 'base:cart' %}">My cart</a></h3></li>
+        <li><h3><a href="{% url 'base:order' %}">My orders</a></h3></li>
+        {% if user.is_authenticated %}
+        <li><h3><a href="{% url 'accounts:logout' %}">Logout</a></h3></li>
+        {% else %}
+        <li><h3><a href="{% url 'accounts:login' %}">Login</a></h3></li>
+        {% endif %}
+    </ul>   
+    <br>
+</nav>

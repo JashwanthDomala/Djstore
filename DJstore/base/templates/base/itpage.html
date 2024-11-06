@@ -1,0 +1,15 @@
+{% extends 'main.html' %}
+
+{% block body %}
+
+{% if message %}
+<h1>{{ message}}</h1>
+{% endif %}
+
+<h1>{{item.name}}</h1>
+<p>{{item.dp}}</p>
+<h3> {{item.price}} </h3>
+<h4>{{item.owner}}</h4>
+<a href="{% url 'base:buy' item.id %}">Buy Now</a>
+<a href="{% url 'base:addcart' item.id %}">Add to cart</a>
+{% endblock %}

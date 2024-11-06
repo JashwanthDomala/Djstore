@@ -1,0 +1,21 @@
+{% extends 'main.html' %}
+
+{% block body %}
+
+
+    <h1>Available items :- </h1>
+<div style="text-align: center;">
+    {% for item in items %}
+
+        
+        <a href="{% url 'base:itpage' item.id %}">
+            <div class="items" >
+                <h2>  Name:- {{ item.name}}</h2>
+                <h3>    Price:- {{ item.price}}</h3> 
+                <h4>    owner:- {{ item.owner }} </h4>
+            </div>
+        </a>
+    {% endfor %}
+</div>
+
+{% endblock %}

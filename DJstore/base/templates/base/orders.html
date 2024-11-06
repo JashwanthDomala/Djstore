@@ -1,0 +1,13 @@
+{% extends 'main.html' %}
+
+{% block body%}
+
+{% for order in myorder %}
+<div>
+    <h1> Item = {{order.item}} </h1>    
+
+    <h2>Address = {{order.location}}</h2>
+</div>
+{% endfor %}
+
+{% endblock %}

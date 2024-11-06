@@ -1,0 +1,16 @@
+{% extends 'main.html' %}
+
+{% block body%}
+
+
+{% for cart in mycart %}
+<div>
+    <h1> Item = {{cart.item}} </h1>
+
+    <h2>price:- {{cart.item.price}}</h2>
+    <h3></h3>
+    <a href="{% url 'base:buy' cart.item.id %}"">Buy Now</a>
+</div>
+{% endfor %}
+
+{% endblock %}
